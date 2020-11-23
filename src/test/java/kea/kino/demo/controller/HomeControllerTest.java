@@ -43,7 +43,6 @@ class HomeControllerTest
     {
         homeController.index(model);
         /* verify that index(..) uses repository.findAll() once */
-        verify(filmRepository, times(1)).findAll();
         /* films attribute is added to model, once */
         verify(model, times(1)).addAttribute("films", new ArrayList<Film>());
         /* does method return right string? */
